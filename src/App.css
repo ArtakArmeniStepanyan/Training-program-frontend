@@ -1,0 +1,50 @@
+.App {
+    background: #E7ECED;
+}
+
+.mainLogo{
+    width: 50px;
+}
+
+.smallAvatar{
+    width: 30px;
+}
+
+.body{
+    margin-top: 20px;
+    min-height: 613px;
+}
+
+.navLink{
+    background: #212529;
+    font-size: 20px;
+    font-weight: 500;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 20px;
+}
+.navLink:hover{
+    background: #52575D;
+    color: #FFFFFF;
+}
+
+.active{
+    background: #52575D;
+}
+
+.footer{
+    margin-top: 20px;
+    width: 100%;
+    min-height: 60px;
+    background: #212529;
+    color: #FFFFFF;
+}
+
+.formDiv{
+    max-width: 400px;
+    margin-top: 35px;
+}
+
+.errorInput{
+    border: 2px solid #f88591!important;
+}
