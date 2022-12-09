@@ -26,6 +26,17 @@ export const addToFriendApi = (userId, friendId) => {
     }});
 }
 
+export const removeFromFriendApi = (userId, friendId) => {
+    const data = {
+        userId: userId,
+        friendId: friendId
+    }
+    return instance.post(`remove-from-friend`,  JSON.stringify(data), {
+        headers: {
+            'Content-Type': 'application/json'
+    }});
+}
+
 export const getIsFriendApi = (userId, friendId) => {
     const data = {
         userId: userId,

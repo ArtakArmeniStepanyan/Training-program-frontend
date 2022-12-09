@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import { useEffect } from 'react';
-import { getUser, addToFriend, getIsFriend } from '../../../../../Redux/Slices/Users/usersReducer';
+import { getUser, addToFriend, removeFromFriend, getIsFriend } from '../../../../../Redux/Slices/Users/usersReducer';
 import { getSelectedUser, getIsFriendValue } from '../../../../../Redux/Slices/Users/usersSelectors';
 import { getCurrentUserId } from '../../../../../Redux/Slices/CurrentUser/currentUserSelectors';
 
@@ -22,6 +22,10 @@ const UserProfile = () => {
 
     const addToFriendHandler = (id) => {
         dispatch(addToFriend(authUserId, id));
+    }
+
+    const removeFromFriendHandler = (id) => {
+        dispatch(removeFromFriend(authUserId, id));
     }
 
     return(
@@ -62,7 +66,7 @@ const UserProfile = () => {
             </div> : ''}
             {authUserId && isFriend ?
             <div className={style.addFriendButtonDiv}>
-                <Button variant="primary" onClick={ () => {addToFriendHandler(selectedUser.userId)} }>Remove from friends</Button>
+                <Button variant="danger" onClick={ () => {removeFromFriendHandler(selectedUser.userId)} }>Remove from friends</Button>
             </div> : ''}
         </Container>    
     )

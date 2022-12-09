@@ -1,4 +1,4 @@
-import{ getUsersApi, getUserApi, addToFriendApi, getIsFriendApi } from '../../../Api/usersApi'
+import{ getUsersApi, getUserApi, addToFriendApi, removeFromFriendApi, getIsFriendApi } from '../../../Api/usersApi'
 let initialState = {
     users: [],
     friends: [],
@@ -84,8 +84,23 @@ export const addToFriend = (userId, friendId) => {
         return await addToFriendApi(userId, friendId)
         .then((resp) => {
             if(resp.data.status === 'ok'){
-                // dispatch(setSelectedUserAC(resp.data.user));
+                dispatch(setIsFriendAC(true));
                 alert('friend added');
+            }   
+            else{
+                console.log(resp.data.message)
+            }
+        })
+    }
+}
+
+export const removeFromFriend = (userId, friendId) => {
+    return async(dispatch, getState) => {
+        return await removeFromFriendApi(userId, friendId)
+        .then((resp) => {
+            if(resp.data.status === 'ok'){
+                dispatch(setIsFriendAC(false));
+                alert('friend removed');
             }   
             else{
                 console.log(resp.data.message)
