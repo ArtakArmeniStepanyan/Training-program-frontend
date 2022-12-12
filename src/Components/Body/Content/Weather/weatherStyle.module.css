@@ -1,0 +1,59 @@
+.sunny{
+    background-image: url("https://images.pexels.com/photos/3768/sky-sunny-clouds-cloudy.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+}
+.rain{
+    background-image: url("https://images.pexels.com/photos/531906/pexels-photo-531906.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+}
+.snow{
+    background-image: url("https://images.pexels.com/photos/60561/winter-snow-nature-60561.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+}
+.cloud{
+    background-image: url("https://images.pexels.com/photos/414659/pexels-photo-414659.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+}
+.smoke{
+    background-image: url("https://media.istockphoto.com/id/57423616/photo/woman-walking-through-park.jpg?s=612x612&w=0&k=20&c=HR-DK8jMricqFtYXAVejJXTpqv6ZVhxeO87Fh2oIo-A=");
+}
+.drizzle{
+    background-image: url("https://img.freepik.com/premium-photo/rain-weather-drops-wet-weather-concept-abstract-drops-water-jets-autumn-rain_548821-22144.jpg");
+}
+.thunderstorm{
+    background-image: url("https://media.istockphoto.com/id/517643357/photo/thunderstorm-lightning-with-dark-cloudy-sky.jpg?s=612x612&w=0&k=20&c=x3G3UijRPVGFMFExnlYGbnQtnlH6-oUoMU48BTkc0Os=");
+}
+
+
+.mainContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.root{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5%;
+    min-height: 400px;
+    max-width: 600px;
+    min-width: 600px;
+    padding-left: 80px;
+    padding-top: 40px;
+}
+
+.main p{
+    font-size: 60px;
+}
+
+li{
+    margin: 0;
+}
+
+li p{
+    margin: 0;
+}
+
+.formDiv{
+    max-width: 300px;
+    margin-bottom: 50px;
+}
+
+.errorMessage{
+    margin-top: -15px;
+    font-size: 22px;
+}
