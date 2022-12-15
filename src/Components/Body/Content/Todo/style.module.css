@@ -1,0 +1,151 @@
+.App {
+    text-align: center;
+  }
+  .mainWindow{
+    display: flex;
+    justify-content: center;
+  }
+  .mainApp{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    min-width: 450px;
+    min-height: 500px;
+    border-radius: 5px;
+    position: relative;
+  
+  }
+  
+  h1{
+    color: #DCCFD3;
+    font-size: 100px;
+    font-weight: 100;
+    margin-bottom: 10px;
+  }
+  
+  form{
+    min-height: 60px;
+    min-width: 450px;
+  }
+  
+  .form{
+    width: 100%;
+    min-height: 60px;
+    border-bottom: 2px solid #DCCFD3;
+  }
+  
+  .newTodoInput{
+    min-height: 58px;
+    min-width: 252px;
+    border: none;
+    outline:none;
+    font-size: 20px;
+    padding-left: 25px;
+  }
+  
+  .error{
+    border: 1px solid red;
+  }
+  
+  .addButton{
+    margin-right: 0px;
+    height: 66px;
+    width: 66px;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    background: #CACACA;
+  }
+  
+  .dateInput{
+    min-width: 130px;
+    min-height: 60px;
+    outline:none;
+    font-size: 18px;
+    padding-left: 25px;
+  }
+  
+  .footer{
+    border-top: 2px solid #DCCFD3;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    min-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .clearButton{
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    min-height: 35px;
+    min-width: 160px;
+    background: #CACACA;
+  }
+  
+  .todoItem{
+    display: flex;
+    align-items: center;
+    background: #F0F0F0;
+    margin-bottom: 2px;
+    min-height: 30px;
+    padding: 5px;
+  }
+  
+  .sortedTodoItem{
+    background: #F0F0F0;
+    margin-bottom: 2px;
+    min-height: 30px;
+  }
+  
+  .sortedItemDateAndButton{
+    display: flex;
+    align-items: center;
+  }
+  
+  .checkbox{
+    border: none;
+    margin-right: 10px;
+  }
+  
+  .closeButton{
+    position: absolute;
+    right: 5px;
+    border: none;
+  }
+  
+  .dates{
+    margin-left: 5px;
+  }
+  
+  .showTodos{
+    position: absolute;
+    right: 5px;
+    border: none;
+    background: #CACACA;
+    min-width: 125px;
+    min-height: 20px;
+  }
+  
+  .todoItemByDate{
+    display: flex;
+    margin-top: 5px;
+    margin-left: 10px;
+  }
+  
+  .showAllButton{
+    border: none;
+    background: #CACACA;
+    min-width: 140px;
+    min-height: 30px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    font-weight: 400;
+    font-size: 16px;
+  }
+  
+  button:hover{
+    cursor: pointer;
+  }

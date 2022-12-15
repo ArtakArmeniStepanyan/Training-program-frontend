@@ -25,9 +25,6 @@ const CityForm = () => {
                 })}
                 type="text" placeholder="Enter city" 
                 className={`${errors.city ? "errorInput": ""}`} 
-
-                
-                // aria-label="Recipient's username"
                 aria-describedby="basic-addon2"
               />
               <Button variant="outline-secondary" type="submit">
