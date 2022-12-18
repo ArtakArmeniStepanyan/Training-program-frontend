@@ -1,11 +1,13 @@
 import style from '../profileStyles.module.css';
 import { useSelector, useDispatch } from 'react-redux';
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Container, Row, Col, Button, Alert } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { getUser, addToFriend, removeFromFriend, getIsFriend } from '../../../../../Redux/Slices/Users/usersReducer';
 import { getSelectedUser, getIsFriendValue } from '../../../../../Redux/Slices/Users/usersSelectors';
 import { getCurrentUserId } from '../../../../../Redux/Slices/CurrentUser/currentUserSelectors';
+import { getSuccessMessage } from '../../../../../Redux/Slices/Users/usersSelectors';
+
 
 const UserProfile = () => {
     const params = useParams();
@@ -28,8 +30,16 @@ const UserProfile = () => {
         dispatch(removeFromFriend(authUserId, id));
     }
 
+    const[showMode, setShowMode] = useState(true);
+    const message = useSelector(getSuccessMessage);
+
     return(
         <Container>
+            {showMode && message?
+                <Alert variant="success" onClose={() => {setShowMode(false)}} dismissible>
+                    <Alert.Heading>{message}</Alert.Heading>
+                </Alert>: ''
+                }
             <Row>
                 <Col lg={5}>
                     <img src={selectedUser.image? 'http://server.am/storage/' + selectedUser.image :

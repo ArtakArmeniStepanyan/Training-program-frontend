@@ -17,13 +17,13 @@ const TodoDemoList = ({todos}) => {
             else
                 return exist = false;
             })
-        console.log(exist);
             if(!exist)
                 dates.push(t.date)
         })
 
     dates.sort();
-    console.log(dates);
+
+     dates = Array.from(new Set(dates)) // WHY????????
 
     return(
         <div>

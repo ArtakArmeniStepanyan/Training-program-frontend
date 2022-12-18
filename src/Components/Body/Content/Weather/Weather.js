@@ -16,7 +16,7 @@ const Weather = () => {
             </div> 
             <div className={style.mainContainer}>
                 {weather.city?<WeatherTemplate weather={weather}/>: 'Please select a city'}
-            </div>: 
+            </div>
         </Container>  
     )
 }

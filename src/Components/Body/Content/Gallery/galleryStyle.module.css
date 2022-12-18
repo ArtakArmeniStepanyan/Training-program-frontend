@@ -1,0 +1,10 @@
+.folderImg{
+    width: 80px;
+}
+.images{
+    display: flex;
+    flex-wrap: wrap;
+}
+.singleImage{
+    margin: 20px;
+}

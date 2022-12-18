@@ -4,7 +4,9 @@ import{ getCurrentUser } from '../../../../Redux/Slices/CurrentUser/currentUserS
 import { Container, Row, Col, Table, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { getUsers } from '../../../../Redux/Slices/Users/usersReducer';
+import { getFriends } from '../../../../Redux/Slices/Users/usersReducer';
 import{ getAllUsers } from '../../../../Redux/Slices/Users/usersSelectors';
+import{ getAllFriends } from '../../../../Redux/Slices/Users/usersSelectors';
 import SingleUserRow from './SingleUserRow';
 import style from './users.module.css';
 
@@ -14,8 +16,10 @@ const Users = () => {
     const authUser = useSelector(getCurrentUser);
     useEffect(() => {
         dispatch(getUsers(authUser.userId));
+        dispatch(getFriends(authUser.userId));
     },[])
     const allUsers = useSelector(getAllUsers);
+    const friends = useSelector(getAllFriends);
     return(
         <Container>
             <Row>
@@ -29,24 +33,11 @@ const Users = () => {
                 </Col>
                 <Col lg={6}>
                     <h2>Friends</h2>
-                    <Table striped bordered hover variant="dark">
-                        <thead>
-                            <tr>
-                                <th>First Name</th>
-                                <th>Last Name</th>
-                                <th>Email</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Artak</td>
-                                <td>Stepanyan</td>
-                                <td><Link to='/user/'>artak@mail.ru</Link></td>
-                                <td><Button variant="outline-danger">Remove</Button></td>
-                            </tr>
-                        </tbody>
-                    </Table>
+                    <div className={style.usersDiv}>
+                        {friends.map(friend => 
+                            <SingleUserRow user={friend} key={friend.id}/>
+                        )}       
+                    </div>
                 </Col>
             </Row>
         </Container>

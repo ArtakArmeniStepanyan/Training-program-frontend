@@ -13,8 +13,8 @@ export const loginApi = (data) => {
 }
 
 export const getCurrentUserApi = (token) => {
-        return instance.get(`login/` + token);
-    }
+    return instance.get(`login/` + token);
+}
 
 export const logoutApi = (id) => {
     return instance.delete(`login/` + id);

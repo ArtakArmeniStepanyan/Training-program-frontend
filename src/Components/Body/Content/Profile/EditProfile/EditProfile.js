@@ -27,8 +27,7 @@ const EditProfile = () => {
         setShow(false);
         dispatch(setSuccessMessageAC(false))
     }
-console.log(successMessage);
-console.log(show);
+
     if(successMessage && show !== true){
         setShow(true)
     }

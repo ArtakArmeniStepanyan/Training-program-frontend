@@ -11,6 +11,10 @@ export const getUsersApi = (id) => {
         return instance.get(`users`);
 }
 
+export const getFriendsApi = (id) => {
+    return instance.get(`friends/` + id);
+}
+
 export const getUserApi = (id) => {
     return instance.get(`user/` + id);
 }

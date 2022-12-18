@@ -34,7 +34,8 @@ const CityForm = () => {
           {errors.city ? 
             <Form.Control.Feedback type="invalid" style={{display: "block"}} className={style.errorMessage}>
               {errors.city.message}
-            </Form.Control.Feedback>:''
+            </Form.Control.Feedback>
+            : ''
           }
         </Form>
     </div>
