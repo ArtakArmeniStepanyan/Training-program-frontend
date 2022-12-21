@@ -8,3 +8,40 @@
 .singleImage{
     margin: 20px;
 }
+.foldersLink{
+    text-decoration: none;
+    color: black;
+}
+.folderHeader{
+    display: flex;
+    justify-content: space-between;
+}
+.imagePreview{
+    width: 300px;
+}
+
+.folderBody{
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid #212529;
+    border-bottom: 1px solid #212529;
+    margin-top: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.folderBody img{
+    width: 150px;
+    margin: 15px;
+}
+.selectedImage{
+    max-width: 1100px;
+}
+.modalBody{
+    display: flex;
+    justify-content: center;
+}
+
+.confirm-box{
+    z-index: 1100!important;
+}

@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import{ getCurrentUser } from '../../../../Redux/Slices/CurrentUser/currentUserSelectors';
 import { Container, Row, Col, Table, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import { getUsers } from '../../../../Redux/Slices/Users/usersReducer';
 import { getFriends } from '../../../../Redux/Slices/Users/usersReducer';
 import{ getAllUsers } from '../../../../Redux/Slices/Users/usersSelectors';

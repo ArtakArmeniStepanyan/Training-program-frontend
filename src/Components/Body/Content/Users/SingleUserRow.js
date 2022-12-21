@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Card, Alert  } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import style from './users.module.css';
 
 

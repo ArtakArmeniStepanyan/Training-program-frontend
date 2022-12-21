@@ -4,9 +4,25 @@ const instance = axios.create({
     baseURL: 'http://server.am/',
 })
 
-// export const createFolderApi = (userId, folderName) => {
-//     return instance.get(`create-folder/` + folderName);
-// }
+export const getUserFoldersApi = (userId) => {
+    return instance.get(`get-folders/` + userId);
+}
+
+export const getCurrentFolderApi = (folderId) => {
+    return instance.get(`get-current-folder/` + folderId);
+}
+
+export const getCurrentImagesApi = (folderId) => {
+    return instance.get(`get-current-images/` + folderId);
+}
+
+export const deleteFolderApi = (folderId) => {
+    return instance.get(`delete-folder/` + folderId);
+}
+
+export const deleteImageApi = (imageId) => {
+    return instance.get(`delete-image/` + imageId);
+}
 
 export const createFolderApi = (userId, folderName) => {
     const data = {
@@ -18,3 +34,11 @@ export const createFolderApi = (userId, folderName) => {
             'Content-Type': 'application/json'
     }});
 }
+
+export const saveImageApi = (data) => {
+    return instance.post(`save-image`, data, {
+        headers: {
+            'Content-Type': 'multipart/form-data'
+    }}) ;
+}
+

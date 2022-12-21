@@ -48,3 +48,7 @@
 .errorInput{
     border: 2px solid #f88591!important;
 }
+
+.confirm-box{
+    z-index: 1100!important;
+}

@@ -15,6 +15,7 @@ import Registration from '../../Auth/Registration';
 import MyProfile from './Profile/MyProfile/MyProfile';
 import EditProfile from './Profile/EditProfile/EditProfile';
 import UserProfile from './Profile/UserProfile/UserProfile';
+import Folder from './Gallery/Folder';
 
 const Content = () => {
     const isAuth = useSelector(getIsAuth);
@@ -23,6 +24,7 @@ const Content = () => {
             <Route path='/' element={<HomePage/>}/>
             <Route path='/todo' element={<Todo/>}/>
             <Route path='/gallery' element={<Gallery />}/>
+            <Route path='/folder/:id' element={<Folder/>}/>
             <Route path='/weather' element={<Weather />}/>
             <Route path='/users' element={<Users/>}/>
             <Route path='/user/:id' element={<UserProfile/>}/>
